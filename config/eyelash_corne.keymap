@@ -157,7 +157,7 @@
                                                                                  &rgb_ug RGB_TOG
             >;
 
-            sensor-bindings = <&mouse_scroll_left_right>;
+            sensor-bindings = <&scroll_encoder>;
         };
     };
 };

@@ -44,14 +44,17 @@
 
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
+            display-name = "Homerow Mods";
             #binding-cells = <2>;
             tapping-term-ms = <180>;
             quick-tap-ms = <180>;
             flavor = "balanced";
+            bindings = <&kp>, <&kp>;
         };
 
         bspc_del: backspace_delete {
             compatible = "zmk,behavior-mod-morph";
+            display-name = "Backspace/Delete";
             #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp DELETE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -59,9 +62,10 @@
 
         tdquit: tap_dance_quit {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD";
+            display-name = "Tap Dance/App Quit";
             #binding-cells = <0>;
             bindings = <&kp TILDE>, <&kp LA(F4)>;
+            tapping-term-ms = <180>;
         };
     };
 

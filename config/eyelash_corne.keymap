@@ -17,16 +17,16 @@
 #define RAISE   4
 #define ADJUST  5
 
-&mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
-
+// Mouse Scroll
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
-
 &msc {
-    acceleration-exponent = <1>;
-    time-to-max-speed-ms = <100>;
+    acceleration-exponent = <0>;
+    time-to-max-speed-ms = <0>;
     delay-ms = <0>;
 };
 
+// Mouse Move
+&mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 &mmv {
     time-to-max-speed-ms = <500>;
     acceleration-exponent = <1>;
